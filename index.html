@@ -5,90 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chaeyoon Shin</title>
 <meta name="description" content="Chaeyoon Shin — M.S. student in Digital Health at SAIHST, Sungkyunkwan University. Computational modeling of biomedical data, causal machine learning, and mental health research.">
-<style>
-  :root {
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --muted: #595959;
-    --accent: #1a5c8a;
-    --rule: #e4e4e4;
-    --tag-bg: #f0f4f8;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #16181d;
-      --text: #e8e8e8;
-      --muted: #9aa0a8;
-      --accent: #7db8dd;
-      --rule: #2e323a;
-      --tag-bg: #21262e;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-  main { max-width: 720px; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
-  h1 { font-size: 2rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
-  .subtitle { color: var(--muted); margin: 0 0 1rem; }
-  .links { margin: 0 0 2.5rem; padding: 0; }
-  .links a { color: var(--accent); text-decoration: none; margin-right: 1.1rem; }
-  .links a:hover { text-decoration: underline; }
-  h2 {
-    font-size: 1.05rem;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: var(--muted);
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: .4rem;
-    margin: 2.5rem 0 1rem;
-  }
-  a { color: var(--accent); }
-  ul { padding-left: 1.2rem; margin: .5rem 0; }
-  li { margin-bottom: .4rem; }
-  .entry { margin-bottom: 1.25rem; }
-  .entry .head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-  .entry .title { font-weight: 600; }
-  .entry .date { color: var(--muted); white-space: nowrap; font-size: .92rem; }
-  .entry .detail { color: var(--muted); font-size: .95rem; }
-  .pub { margin-bottom: 1rem; }
-  .pub .authors { color: var(--muted); font-size: .95rem; }
-  .pub .me { color: var(--text); font-weight: 600; }
-  .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
-  .tag {
-    background: var(--tag-bg);
-    border-radius: 999px;
-    padding: .25rem .8rem;
-    font-size: .88rem;
-    color: var(--muted);
-  }
-  footer { margin-top: 3.5rem; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-  <h1>Chaeyoon Shin</h1>
-  <p class="subtitle">M.S. Student in Digital Health · SAIHST, Sungkyunkwan University</p>
-  <p class="links">
-    <a href="mailto:cyshin0823@g.skku.edu">Email</a>
-    <a href="https://github.com/chaeyoon-shin">GitHub</a>
-    <a href="https://www.linkedin.com/in/chaeyoon-shin">LinkedIn</a>
+  <nav>
+    <a href="index.html" class="active">About</a>
+    <a href="activities.html">Activities</a>
     <a href="cv.pdf">CV</a>
-  </p>
+  </nav>
+
+  <div class="hero">
+    <img src="profile.jpg" alt="Chaeyoon Shin" onerror="this.style.display='none'">
+    <div>
+      <h1>Chaeyoon Shin</h1>
+      <p class="subtitle">M.S. Student in Digital Health<br>SAIHST, Sungkyunkwan University</p>
+      <p class="links">
+        <a href="mailto:cyshin0823@g.skku.edu">Email</a>
+        <a href="https://github.com/chaeyoon-shin">GitHub</a>
+        <a href="https://www.linkedin.com/in/cyshin0823/">LinkedIn</a>
+      </p>
+    </div>
+  </div>
 
   <section>
     <h2>About</h2>
     <p>
       I am a master's student in Digital Health at the Samsung Advanced Institute for Health
-      Sciences &amp; Technology (SAIHST), Sungkyunkwan University, advised by
-      <a href="https://sites.google.com/view/gennielab">Dr. Yoonjung Yoonie Joo</a> in the
-      Genomics &amp; Neural Network Intelligence for Healthcare (GENNIE) Lab.
-      I am interested in leveraging diverse biomedical data — multi-omics, clinical registries,
-      and patient-generated health data — through computational and statistical modeling to
-      quantify heterogeneity in individual health trajectories and outcomes.
+      Sciences &amp; Technology (SAIHST), Sungkyunkwan University, advised by Dr. Yoonjung Yoonie Joo
+      in the <a href="https://gennielab.weebly.com/">Genomics &amp; Neural Network Intelligence for
+      Healthcare (GENNIE) Lab</a>.
+      My research focuses on leveraging diverse biomedical data (e.g. multi-omics, wearable sensor
+      data, clinical records, environmental factors) and computational/statistical methods to better
+      understand health outcomes, quantify individual heterogeneity, and improve personalized risk
+      prediction, prevention, and intervention.
     </p>
     <div class="tags">
       <span class="tag">Causal machine learning</span>
@@ -143,17 +93,6 @@
       <ul>
         <li>Trained in cell culture and experimental techniques in ovarian cancer research (JC-1 staining, hanging drop assays, tissue preparation).</li>
       </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Presentations &amp; Teaching</h2>
-    <div class="entry">
-      <div class="head"><span class="title">Poster Presentation, Korean Society of Medical Informatics (KOSMI)</span><span class="date">2026</span></div>
-      <div class="detail">Co-authored paper awarded Best Poster</div>
-    </div>
-    <div class="entry">
-      <div class="head"><span class="title">Teaching Assistant, Introduction to Healthcare Data Analytics</span><span class="date">Spring 2026</span></div>
     </div>
   </section>
 
