@@ -8,113 +8,119 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <nav>
-    <a href="index.html" class="active">About</a>
-    <a href="activities.html">Activities</a>
-    <a href="cv.pdf">CV</a>
-  </nav>
-
-  <div class="hero">
-    <img src="profile.jpg" alt="Chaeyoon Shin" onerror="this.style.display='none'">
+<div class="layout">
+  <aside>
+    <img class="portrait" src="profile.jpg" alt="Chaeyoon Shin">
     <div>
       <h1>Chaeyoon Shin</h1>
       <p class="subtitle">M.S. Student in Digital Health<br>SAIHST, Sungkyunkwan University</p>
-      <p class="links">
-        <a href="mailto:cyshin0823@g.skku.edu">Email</a>
-        <a href="https://github.com/chaeyoon-shin">GitHub</a>
-        <a href="https://www.linkedin.com/in/cyshin0823/">LinkedIn</a>
+      <div class="links">
+        <a href="mailto:cyshin0823@g.skku.edu"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6.5l8 5 8-5v1.74z"/></svg>Email</a>
+        <a href="https://github.com/chaeyoon-shin"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>GitHub</a>
+        <a href="https://www.linkedin.com/in/cyshin0823/"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+        <a href="cv.pdf"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zm-5 4h8v1.5H8V13zm0 3h8v1.5H8V16z"/></svg>CV (PDF)</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <nav>
+      <a href="index.html" class="active">About</a>
+      <a href="activities.html">Activities</a>
+    </nav>
+
+    <section>
+      <h2>About</h2>
+      <p class="lead">
+        I am a master's student in Digital Health at the Samsung Advanced Institute for Health
+        Sciences &amp; Technology (SAIHST), Sungkyunkwan University, advised by Dr. Yoonjung Yoonie Joo
+        in the <a href="https://gennielab.weebly.com/">Genomics &amp; Neural Network Intelligence for
+        Healthcare (GENNIE) Lab</a>.
+        My research focuses on leveraging diverse biomedical data (e.g. multi-omics, wearable sensor
+        data, clinical records, environmental factors) and computational/statistical methods to better
+        understand health outcomes, quantify individual heterogeneity, and improve personalized risk
+        prediction, prevention, and intervention.
       </p>
-    </div>
-  </div>
+      <div class="tags">
+        <span class="tag">Causal machine learning</span>
+        <span class="tag">Risk stratification</span>
+        <span class="tag">Multi-omics</span>
+        <span class="tag">Mental health &amp; psychiatric phenotypes</span>
+      </div>
+    </section>
 
-  <section>
-    <h2>About</h2>
-    <p>
-      I am a master's student in Digital Health at the Samsung Advanced Institute for Health
-      Sciences &amp; Technology (SAIHST), Sungkyunkwan University, advised by Dr. Yoonjung Yoonie Joo
-      in the <a href="https://gennielab.weebly.com/">Genomics &amp; Neural Network Intelligence for
-      Healthcare (GENNIE) Lab</a>.
-      My research focuses on leveraging diverse biomedical data (e.g. multi-omics, wearable sensor
-      data, clinical records, environmental factors) and computational/statistical methods to better
-      understand health outcomes, quantify individual heterogeneity, and improve personalized risk
-      prediction, prevention, and intervention.
-    </p>
-    <div class="tags">
-      <span class="tag">Causal machine learning</span>
-      <span class="tag">Risk stratification</span>
-      <span class="tag">Multi-omics</span>
-      <span class="tag">Mental health &amp; psychiatric phenotypes</span>
-    </div>
-  </section>
+    <section>
+      <h2>Publications</h2>
+      <div class="pub">
+        <div class="title">Psychological resources confer greatest protection against late-life depression in genetically vulnerable adults</div>
+        <div class="authors"><span class="me">Chaeyoon Shin</span>, Junghoon Park, et al.</div>
+        <div class="venue"><em>Preprint</em>, June 2026 · <a href="https://doi.org/10.21203/rs.3.rs-9990161/v1">doi:10.21203/rs.3.rs-9990161/v1</a></div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Publications</h2>
-    <div class="pub">
-      <div class="authors"><span class="me">Chaeyoon Shin</span>, Junghoon Park, et al.</div>
-      <div>Psychological resources confer greatest protection against late-life depression in genetically vulnerable adults.</div>
-      <div class="detail"><em>Preprint</em>, June 2026. <a href="https://doi.org/10.21203/rs.3.rs-9990161/v1">doi:10.21203/rs.3.rs-9990161/v1</a></div>
-    </div>
-  </section>
+    <section>
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="head"><span class="title">Sungkyunkwan University — SAIHST</span><span class="date">Mar 2026 –</span></div>
+          <div class="detail">M.S. in Digital Health · Advisor: Dr. Yoonjung Yoonie Joo</div>
+        </div>
+        <div class="entry">
+          <div class="head"><span class="title">Sungkyunkwan University</span><span class="date">Mar 2022 – Feb 2026</span></div>
+          <div class="detail">B.E. in Integrative Biotechnology, <em>Magna Cum Laude</em></div>
+        </div>
+        <div class="entry">
+          <div class="head"><span class="title">The University of Texas at Dallas</span><span class="date">Aug – Dec 2024</span></div>
+          <div class="detail">Fall Exchange Student Program</div>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Education</h2>
-    <div class="entry">
-      <div class="head"><span class="title">Sungkyunkwan University — SAIHST</span><span class="date">Mar 2026 –</span></div>
-      <div class="detail">M.S. in Digital Health · Advisor: Dr. Yoonjung Yoonie Joo</div>
-    </div>
-    <div class="entry">
-      <div class="head"><span class="title">Sungkyunkwan University</span><span class="date">Mar 2022 – Feb 2026</span></div>
-      <div class="detail">B.E. in Integrative Biotechnology, <em>Magna Cum Laude</em></div>
-    </div>
-    <div class="entry">
-      <div class="head"><span class="title">The University of Texas at Dallas</span><span class="date">Aug – Dec 2024</span></div>
-      <div class="detail">Fall Exchange Student Program</div>
-    </div>
-  </section>
+    <section>
+      <h2>Research Experience</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="head"><span class="title">GENNIE Lab, SKKU — Undergraduate Research Intern</span><span class="date">Jan 2025 – Feb 2026</span></div>
+          <ul>
+            <li>Analyzed key determinants and their interaction with polygenic scores (G×E) on late-life depressive symptoms using the Wisconsin Longitudinal Study; applied H2O AutoML, moderation analysis, and generalized structured component analysis.</li>
+            <li>Examined heterogeneous treatment effects of latency prolongation on neonatal outcomes following PPROM using the Korean Neonatal Network; applied causal forest machine learning (GRF) and restricted cubic spline analysis.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="head"><span class="title">COCOAN Lab, SKKU — Undergraduate Research Program</span><span class="date">Dec 2023 – Aug 2024</span></div>
+          <ul>
+            <li>Conducted fMRI data analysis and derived activation maps using MATLAB; participated in pilot studies and assisted fMRI experiments.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="head"><span class="title">Lab of Molecular Development &amp; Cell Signaling, SKKU — Industry-Academia Project</span><span class="date">Jan – Feb 2024</span></div>
+          <ul>
+            <li>Trained in cell culture and experimental techniques in ovarian cancer research (JC-1 staining, hanging drop assays, tissue preparation).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Research Experience</h2>
-    <div class="entry">
-      <div class="head"><span class="title">GENNIE Lab, SKKU — Undergraduate Research Intern</span><span class="date">Jan 2025 – Feb 2026</span></div>
-      <ul>
-        <li>Analyzed key determinants and their interaction with polygenic scores (G×E) on late-life depressive symptoms using the Wisconsin Longitudinal Study; applied H2O AutoML, moderation analysis, and generalized structured component analysis.</li>
-        <li>Examined heterogeneous treatment effects of latency prolongation on neonatal outcomes following PPROM using the Korean Neonatal Network; applied causal forest machine learning (GRF) and restricted cubic spline analysis.</li>
+    <section>
+      <h2>Awards &amp; Honors</h2>
+      <ul class="plain">
+        <li><span>SKKU Graduate Scholarship — 100% tuition support for master's program</span><span class="year">2026</span></li>
+        <li><span>KorUS Educational Exchange Initiative for Youth in STEM — $9,000/semester (KIAT)</span><span class="year">2024</span></li>
+        <li><span>SKKU Next Generation Scholars Program — 100% tuition support for 3rd–4th undergraduate years</span><span class="year">2024</span></li>
+        <li><span>SKKU Academic Excellence Scholarship — top 10%</span><span class="year">2023</span></li>
       </ul>
-    </div>
-    <div class="entry">
-      <div class="head"><span class="title">COCOAN Lab, SKKU — Undergraduate Research Program</span><span class="date">Dec 2023 – Aug 2024</span></div>
-      <ul>
-        <li>Conducted fMRI data analysis and derived activation maps using MATLAB; participated in pilot studies and assisted fMRI experiments.</li>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="plain">
+        <li><span><strong>Programming</strong></span><span>R · Python · Linux/Bash</span></li>
+        <li><span><strong>Languages</strong></span><span>Korean (native) · English (TOEFL 107, TOEIC 960)</span></li>
       </ul>
-    </div>
-    <div class="entry">
-      <div class="head"><span class="title">Lab of Molecular Development &amp; Cell Signaling, SKKU — Industry-Academia Project</span><span class="date">Jan – Feb 2024</span></div>
-      <ul>
-        <li>Trained in cell culture and experimental techniques in ovarian cancer research (JC-1 staining, hanging drop assays, tissue preparation).</li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2>Awards &amp; Honors</h2>
-    <ul>
-      <li>SKKU Graduate Scholarship — 100% tuition support for master's program (2026)</li>
-      <li>KorUS Educational Exchange Initiative for Youth in STEM — $9,000/semester, Korea Institute for Advancement of Technology (2024)</li>
-      <li>SKKU Next Generation Scholars Program — 100% tuition support for 3rd–4th undergraduate years (2024)</li>
-      <li>SKKU Academic Excellence Scholarship — top 10% (2023)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Programming:</strong> R, Python, Linux/Bash</li>
-      <li><strong>Languages:</strong> Korean (native), English (TOEFL 107/120, TOEIC 960/990)</li>
-    </ul>
-  </section>
-
-  <footer>Last updated July 2026 · Chaeyoon Shin</footer>
-</main>
+    <footer>Last updated July 2026 · Chaeyoon Shin</footer>
+  </main>
+</div>
 </body>
 </html>
