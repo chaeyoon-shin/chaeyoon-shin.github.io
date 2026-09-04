@@ -5,4 +5,4 @@ cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF file
 email: cyshin0823@g.skku.edu # your email address
 github_username: chaeyoon-shin # your GitHub user name
 linkedin_username: cyshin0823 # your LinkedIn user name
-rss_icon: true # comment this line to hide the RSS icon
+# rss_icon: true # comment this line to hide the RSS icon
