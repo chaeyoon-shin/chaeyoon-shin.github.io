@@ -23,7 +23,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a master's student in Digital Health at the [Samsung Advanced Institute for Health Sciences & Technology (SAIHST), Sungkyunkwan University](https://en.saihst.kr/), advised by Dr. Yoonjung Yoonie Joo in the [Genomics & Neural Network Intelligence for Healthcare (GENNIE) Lab](https://gennielab.weebly.com/).
+I am a master's student in Digital Health at the [Samsung Advanced Institute for Health Sciences & Technology (SAIHST), Sungkyunkwan University](https://en.saihst.kr/), advised by Dr. Yoonjung Yoonie Joo in the [Genomics & Neural Network Intelligence for Healthcare (GENNIE) Lab](https://gennielab.skku.edu/).
 
 My research focuses on leveraging diverse biomedical data (e.g. multi-omics, wearable sensor data, clinical records, environmental factors) and computational/statistical methods to better understand health outcomes, quantify individual heterogeneity, and improve personalized risk prediction, prevention, and intervention.
 
