@@ -48,23 +48,23 @@ nav_order: 5
   .fp-globe .tag rect { fill: var(--fp-card); stroke: var(--fp-ink); stroke-width: 1.2; }
   .fp-globe .tag text { font: 500 12.5px/1 "Roboto", sans-serif; fill: var(--fp-ink); }
 
-  .fp-dna { height: 560px; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; border-radius: 8px; }
+  .fp-dna { height: 520px; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; border-radius: 8px; }
   .fp-dna svg { display: block; width: 100%; height: auto; font-family: "Roboto", sans-serif; }
-  .fp-dna .strand { fill: none; stroke-width: 6; stroke-linecap: round; }
+  .fp-dna .strand { fill: none; stroke-width: 5; stroke-linecap: round; }
   .fp-dna .strand.b { stroke: var(--fp-strand); }
-  .fp-dna .rung { stroke-width: 3; stroke-linecap: round; opacity: .55; }
+  .fp-dna .rung { stroke-width: 2.5; stroke-linecap: round; opacity: .55; }
   .fp-dna .bub { cursor: pointer; }
   .fp-dna .bub circle.body { fill: var(--fp-card); filter: url(#fp-sh); }
   .fp-dna .bub:hover circle.body, .fp-dna .bub.on circle.body { stroke: var(--fp-accent); stroke-width: 3; }
-  .fp-dna .bub text { font: 500 10px/1 "Roboto", sans-serif; letter-spacing: .05em; fill: var(--fp-ink); text-anchor: middle; pointer-events: none; }
+  .fp-dna .bub text { font: 500 8.5px/1 "Roboto", sans-serif; letter-spacing: .05em; fill: var(--fp-ink); text-anchor: middle; pointer-events: none; }
   .fp-dna .bub .sat { fill: var(--fp-accent); }
-  .fp-dna .when { font: 500 10.5px/1 "Roboto", sans-serif; fill: var(--fp-ink-2); pointer-events: none; }
-  .fp-dna .note { font: 400 9.5px/1 "Roboto", sans-serif; fill: var(--fp-muted); pointer-events: none; }
+  .fp-dna .when { font: 500 9.5px/1 "Roboto", sans-serif; fill: var(--fp-ink-2); pointer-events: none; }
+  .fp-dna .note { font: 400 8.5px/1 "Roboto", sans-serif; fill: var(--fp-muted); pointer-events: none; }
   .fp-dna .pill { cursor: pointer; }
   .fp-dna .pill rect { stroke: var(--fp-card); stroke-width: 2; filter: url(#fp-sh); }
   .fp-dna .pill:hover rect, .fp-dna .pill.on rect { stroke: var(--fp-accent); }
-  .fp-dna .pill .city { font: 500 13px/1 "Roboto", sans-serif; fill: var(--fp-ink); pointer-events: none; }
-  .fp-dna .pill .yrs { font: 500 10px/1 "Roboto", sans-serif; fill: var(--fp-ink-2); pointer-events: none; letter-spacing: .03em; }
+  .fp-dna .pill .city { font: 500 11.5px/1 "Roboto", sans-serif; fill: var(--fp-ink); pointer-events: none; }
+  .fp-dna .pill .yrs { font: 500 9px/1 "Roboto", sans-serif; fill: var(--fp-ink-2); pointer-events: none; letter-spacing: .03em; }
   .fp-dna [tabindex]:focus-visible { outline: 3px solid var(--fp-accent); outline-offset: 3px; border-radius: 50%; }
 
   .fp-side { display: grid; gap: 10px; }
@@ -159,30 +159,30 @@ nav_order: 5
 
   // ---- DNA timeline: vertical double helix, ordinal slots ----
   const items = [];
-  HOMES.forEach((h, i) => { items.push({ kind: 'home', i, h, w: 72 }); groups.forEach((g, gi) => { if (g.era === i) items.push({ kind: 'trip', gi, g, w: 64 }); }); });
-  let cursor = 22; items.forEach(it => { it.y = cursor + it.w / 2; cursor += it.w; });
-  const Hd = cursor + 22, Wd = 300, cx = 150, A = 40, P = 480;
+  HOMES.forEach((h, i) => { items.push({ kind: 'home', i, h, w: 54 }); groups.forEach((g, gi) => { if (g.era === i) items.push({ kind: 'trip', gi, g, w: 46 }); }); });
+  let cursor = 16; items.forEach(it => { it.y = cursor + it.w / 2; cursor += it.w; });
+  const Hd = cursor + 16, Wd = 300, cx = 150, A = 34, P = 400;
   const xA = y => cx + A * Math.sin(2 * Math.PI * y / P), xB = y => cx - A * Math.sin(2 * Math.PI * y / P);
-  const eraSpan = i => { const s0 = items.find(it => it.kind === 'home' && it.i === i).y - 36; const n = items.find(it => it.kind === 'home' && it.i === i + 1); return [s0, n ? n.y - 36 : Hd - 22]; };
+  const eraSpan = i => { const s0 = items.find(it => it.kind === 'home' && it.i === i).y - 27; const n = items.find(it => it.kind === 'home' && it.i === i + 1); return [s0, n ? n.y - 27 : Hd - 16]; };
   const strand = (fx, y0, y1) => 'M' + d3.range(y0, y1 + 0.01, 4).map(y => `${fx(y).toFixed(1)},${y.toFixed(1)}`).join(' L');
   let s = `<svg viewBox="0 0 ${Wd} ${Hd}"><defs><filter id="fp-sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#000" flood-opacity=".12"/></filter></defs>`;
   HOMES.forEach((h, i) => { const [y0, y1] = eraSpan(i); s += `<path class="strand b" d="${strand(xB, y0, y1)}"/><path class="strand" stroke="${river(h.cc)}" d="${strand(xA, y0, y1)}"/>`; });
   let alt = 0;
   items.forEach(it => {
     if (it.kind === 'home') {
-      const h = it.h, y = it.y, w = 124, hh = 34;
+      const h = it.h, y = it.y, w = 112, hh = 28;
       s += `<g class="pill" data-h="${it.i}" tabindex="0"><rect x="${cx - w / 2}" y="${y - hh / 2}" width="${w}" height="${hh}" rx="17" fill="${river(h.cc)}"/>`;
-      s += `<image href="${FLAGS[h.cc]}" x="${cx - w / 2 + 9}" y="${y - 8}" width="24" height="16" preserveAspectRatio="xMidYMid slice"/>`;
-      s += `<text class="city" x="${cx - w / 2 + 40}" y="${y - 1}">${h.city}</text><text class="yrs" x="${cx - w / 2 + 40}" y="${y + 11}">${h.start}–${h.present ? 'now' : String(h.end).slice(2)}</text></g>`;
+      s += `<image href="${FLAGS[h.cc]}" x="${cx - w / 2 + 8}" y="${y - 7}" width="21" height="14" preserveAspectRatio="xMidYMid slice"/>`;
+      s += `<text class="city" x="${cx - w / 2 + 36}" y="${y - 2}">${h.city}</text><text class="yrs" x="${cx - w / 2 + 36}" y="${y + 9}">${h.start}–${h.present ? 'now' : String(h.end).slice(2)}</text></g>`;
       return;
     }
-    const g = it.g, y = it.y, n = g.pts.length, d = Math.min(54, 40 + (n - 1) * 1.4), r = d / 2;
+    const g = it.g, y = it.y, n = g.pts.length, d = Math.min(44, 32 + (n - 1) * 1.2), r = d / 2;
     alt ^= 1; const x = alt ? xA(y) : xB(y), xo = alt ? xB(y) : xA(y);
     s += `<line class="rung" x1="${x}" y1="${y}" x2="${xo}" y2="${y}" stroke="${river(HOMES[g.era].cc)}"/>`;
     s += `<g class="bub" data-g="${it.gi}" tabindex="0"><circle class="body" cx="${x}" cy="${y}" r="${r}"/>`;
     s += `<image href="${FLAGS[g.cc]}" x="${x - d * .24}" y="${y - d * .3}" width="${d * .48}" height="${d * .32}" preserveAspectRatio="xMidYMid slice"/>`;
     s += `<text x="${x}" y="${y + d * .26}">${code(g.cc)}</text>`;
-    if (n > 1) d3.range(n).forEach(k => { const a = -Math.PI / 2 + k * 2 * Math.PI / n; s += `<circle class="sat" cx="${(x + (r + 1) * Math.cos(a)).toFixed(1)}" cy="${(y + (r + 1) * Math.sin(a)).toFixed(1)}" r="2.6"/>`; });
+    if (n > 1) d3.range(n).forEach(k => { const a = -Math.PI / 2 + k * 2 * Math.PI / n; s += `<circle class="sat" cx="${(x + (r + 1) * Math.cos(a)).toFixed(1)}" cy="${(y + (r + 1) * Math.sin(a)).toFixed(1)}" r="2.2"/>`; });
     s += '</g>';
     const right = x >= cx, lx = right ? x + r + 8 : x - r - 8, anchor = right ? 'start' : 'end';
     s += `<text class="when" x="${lx}" y="${y + (g.note ? -2 : 4)}" text-anchor="${anchor}">${g.when}</text>`;
