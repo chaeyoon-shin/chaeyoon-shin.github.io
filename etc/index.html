@@ -60,8 +60,8 @@
   .fp-dna .pill .yrs { font: 500 9px/1 "Roboto", sans-serif; fill: var(--fp-ink-2); pointer-events: none; letter-spacing: .03em; }
   .fp-dna [tabindex]:focus-visible { outline: 3px solid var(--fp-accent); outline-offset: 3px; border-radius: 50%; }
 
-  .fp-side { display: grid; gap: 10px; }
-  .fp-chr { width: 100%; max-width: 250px; height: auto; display: block; overflow: visible; font-family: "Roboto", sans-serif; justify-self: center; }
+  .fp-side { position: relative; display: grid; grid-template-columns: 132px 1fr; gap: 12px; align-items: start; }
+  .fp-chr { width: 132px; height: auto; display: block; overflow: visible; font-family: "Roboto", sans-serif; }
   .fp-chr .outline { fill: var(--fp-card); stroke: var(--fp-ink); stroke-width: 1.8; }
   .fp-chr .band { fill: var(--fp-ink); cursor: pointer; }
   .fp-chr .band.lt { fill: var(--fp-card); }
@@ -71,7 +71,9 @@
   .fp-chr .bn { font: 500 11px/1 "Roboto", sans-serif; fill: var(--fp-ink); cursor: pointer; }
   .fp-chr .bn:hover, .fp-chr .bn.on { fill: var(--fp-accent); }
   .fp-chr .tick { stroke: var(--fp-ink); stroke-width: 1; }
-  .fp-card { display: grid; gap: 4px; padding: 12px 14px; border-radius: 8px; background: var(--fp-card); border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)); min-height: 64px; align-content: center; }
+  .fp-card { position: absolute; left: 144px; right: 0; top: 0; display: grid; gap: 4px; padding: 10px 12px; border-radius: 8px; background: var(--fp-card); border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)); transition: top .25s; }
+  .fp-card::before { content: ""; position: absolute; left: -7px; top: 50%; width: 12px; height: 12px; margin-top: -6px; background: var(--fp-card); border-left: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)); border-bottom: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)); transform: rotate(45deg); }
+  @media (prefers-reduced-motion: reduce) { .fp-card { transition: none; } }
   .fp-card b { font-size: 14px; font-weight: 500; }
   .fp-card p { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--fp-ink-2); }
   .fp-card .play { all: unset; cursor: pointer; color: var(--fp-accent); border-bottom: 1px dotted var(--fp-accent); font: inherit; }
@@ -81,7 +83,7 @@
   .fp-card .play:focus-visible { outline: 2px solid var(--fp-accent); outline-offset: 2px; border-radius: 3px; }
   .fp-card .player { display: block; }
   .fp-card .player iframe { display: block; width: 100%; height: 152px; border: 0; border-radius: 8px; margin-top: 10px; }
-</style> <h2 class="fp-h">Footprints</h2> <div class="fp" id="fp"> <svg class="fp-globe" id="fp-globe" viewbox="0 0 400 400" role="img" aria-label="Globe turned to the selected place"></svg> <div class="fp-dna" id="fp-dna"></div> <div class="fp-side"> <svg class="fp-chr" id="fp-chr" viewbox="0 0 250 470" role="img" aria-label="My interests drawn as one chromosome"></svg> <div class="fp-card" id="fp-card"></div> </div> </div> <script>
+</style> <h2 class="fp-h">Footprints</h2> <div class="fp" id="fp"> <svg class="fp-globe" id="fp-globe" viewbox="0 0 400 400" role="img" aria-label="Globe turned to the selected place"></svg> <div class="fp-dna" id="fp-dna"></div> <div class="fp-side"> <svg class="fp-chr" id="fp-chr" viewbox="0 0 132 470" role="img" aria-label="My interests drawn as one chromosome"></svg> <div class="fp-card" id="fp-card"></div> </div> </div> <script>
 (function () {
   const HOMES = [
     { city: 'Suwon',    cc: 'KR', lat: 37.263, lon: 127.028, start: 2003, end: 2006 },
@@ -342,7 +344,7 @@
     { id: 'pop',   arm: 'q', label: 'q12', name: 'Pop music', text: 'I like to find hidden gems. Lately on repeat: <button class="play" data-sp="654XTpkoachnc4HT2Fi3Fn">flowerovlove</button>, <button class="play" data-sp="6vhPYadsf8JILPYYuuCqya">GLADES</button><span class="player" id="fp-player"></span>' },
     { id: 'story', arm: 'q', label: 'q21', name: 'Stories',   text: 'I love reading classic novels (especially Hermann Hesse) and watching well-made documentaries or series that stay with me long after the credits.' },
   ];
-  const CX = 78, HW = 24, TOP = 22, CEN = 150, BOT = 440, WAIST = 9, NECK = 26;
+  const CX = 100, HW = 24, TOP = 22, CEN = 150, BOT = 440, WAIST = 9, NECK = 26;
   // outline: rounded telomeres, pinched centromere (one continuous body)
   const outline = `M${CX - HW},${TOP + HW} A${HW},${HW} 0 0 1 ${CX + HW},${TOP + HW} L${CX + HW},${CEN - NECK} C${CX + HW},${CEN - 6} ${CX + WAIST},${CEN - 8} ${CX + WAIST},${CEN} C${CX + WAIST},${CEN + 8} ${CX + HW},${CEN + 6} ${CX + HW},${CEN + NECK} L${CX + HW},${BOT - HW} A${HW},${HW} 0 0 1 ${CX - HW},${BOT - HW} L${CX - HW},${CEN + NECK} C${CX - HW},${CEN + 6} ${CX - WAIST},${CEN + 8} ${CX - WAIST},${CEN} C${CX - WAIST},${CEN - 8} ${CX - HW},${CEN - 6} ${CX - HW},${CEN - NECK} Z`;
   // band rows: [y0, y1, id|null] — dark/light G-banding with unlabelled filler bands, like a real ideogram
@@ -358,19 +360,28 @@
     c += `<line class="sep" x1="${CX - HW}" x2="${CX + HW}" y1="${y0}" y2="${y0}" clip-path="url(#fp-cc)"/>`;
     if (b) {
       Object.assign(b, { y0, y1 });
-      c += `<text class="bl" x="${CX - HW - 10}" y="${(y0 + y1) / 2 + 3.5}" text-anchor="end">${b.label}</text>`;
-      c += `<line class="tick" x1="${CX + HW}" x2="${CX + HW + 14}" y1="${(y0 + y1) / 2}" y2="${(y0 + y1) / 2}"/>`;
-      c += `<text class="bn" data-b="${id}" x="${CX + HW + 19}" y="${(y0 + y1) / 2 + 4}">${b.name}</text>`;
+      c += `<text class="bn" data-b="${id}" x="${CX - HW - 10}" y="${(y0 + y1) / 2 - 1}" text-anchor="end">${b.name}</text>`;
+      c += `<text class="bl" x="${CX - HW - 10}" y="${(y0 + y1) / 2 + 11}" text-anchor="end">${b.label}</text>`;
+      c += `<line class="tick" x1="${CX + HW}" x2="${CX + HW + 8}" y1="${(y0 + y1) / 2}" y2="${(y0 + y1) / 2}"/>`;
     }
   });
   c += `<text class="bl" x="${CX - HW - 10}" y="${TOP + 4}" text-anchor="end">p</text><text class="bl" x="${CX - HW - 10}" y="${BOT}" text-anchor="end">q</text>`;
   const chr = document.getElementById('fp-chr'); chr.innerHTML = c;
-  const card = document.getElementById('fp-card');
+  const card = document.getElementById('fp-card'), side = card.parentElement;
+  let curBand = 'piano';
+  function placeCard() {
+    const el = chr.querySelector(`rect[data-b="${curBand}"]`); if (!el) return;
+    const r = el.getBoundingClientRect(), sr = side.getBoundingClientRect();
+    const top = r.top - sr.top + r.height / 2 - card.offsetHeight / 2;
+    card.style.top = Math.max(0, Math.min(sr.height - card.offsetHeight, top)) + 'px';
+  }
   function showBand(id) {
-    const b = BANDS.find(d => d.id === id);
+    const b = BANDS.find(d => d.id === id); curBand = id;
     chr.querySelectorAll('[data-b]').forEach(n => n.classList.toggle('on', n.dataset.b === id));
     card.innerHTML = `<b>${b.name}</b><p>${b.text}</p>`;
+    placeCard();
   }
+  addEventListener('resize', placeCard);
   chr.addEventListener('click', e => { const n = e.target.closest('[data-b]'); if (n) showBand(n.dataset.b); });
   card.addEventListener('click', e => {
     const b = e.target.closest('.play'); if (!b) return;
@@ -381,7 +392,7 @@
   chr.addEventListener('keydown', e => { const n = e.target.closest('[data-b]'); if (n && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); showBand(n.dataset.b); } });
   showBand('piano');
 })();
-</script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Chaeyoon Shin. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+</script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Chaeyoon Shin. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
