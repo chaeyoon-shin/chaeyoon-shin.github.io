@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -27,4 +27,4 @@ I am a master's student in Digital Health at the [Samsung Advanced Institute for
 
 My research focuses on leveraging diverse biomedical data (e.g. multi-omics, wearable sensor data, clinical records, environmental factors) and computational/statistical methods to better understand health outcomes, quantify individual heterogeneity, and improve personalized risk prediction, prevention, and intervention.
 
-I received a B.E. in Integrative Biotechnology (_Magna Cum Laude_) from Sungkyunkwan University.
+I received a B.E. in Integrative Biotechnology from Sungkyunkwan University.

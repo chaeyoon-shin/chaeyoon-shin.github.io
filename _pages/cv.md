@@ -1,12 +1,13 @@
 ---
 layout: page
 permalink: /cv/
-title: CV
+title: cv
 nav: true
 nav_order: 4
-description:
 ---
 
-<!-- ponytail: plain PDF link instead of the rendercv-driven CV layout; switch to layout cv + _data/cv.yml when a structured CV is wanted -->
+<!-- ponytail: inline PDF embed instead of the rendercv-driven CV layout; switch to layout cv + _data/cv.yml when a structured CV is wanted -->
 
-[Download my CV (PDF)](/assets/pdf/cv.pdf){:target="\_blank"}
+<iframe src="/assets/pdf/cv.pdf#navpanes=0" width="100%" height="900px" style="border: none;">
+  <p>Your browser cannot display embedded PDFs. <a href="/assets/pdf/cv.pdf">Download the CV instead</a>.</p>
+</iframe>
