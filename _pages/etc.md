@@ -4,6 +4,7 @@ title: etc
 permalink: /etc/
 nav: true
 nav_order: 5
+published: false # hidden for now; delete this line to restore
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
