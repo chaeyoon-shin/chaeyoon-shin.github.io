@@ -25,6 +25,8 @@ latest_posts:
 
 I am a master's student in Digital Health at the [Samsung Advanced Institute for Health Sciences & Technology (SAIHST), Sungkyunkwan University](https://en.saihst.kr/), advised by Dr. Yoonjung Yoonie Joo in the [Genomics & Neural Network Intelligence for Healthcare (GENNIE) Lab](https://gennielab.skku.edu/).
 
-My research focuses on leveraging diverse biomedical data (e.g. multi-omics, wearable sensor data, clinical records, environmental factors) and computational/statistical methods to better understand health outcomes, quantify individual heterogeneity, and improve personalized risk prediction, prevention, and intervention.
+Driven by an interest in human behavior and psychology, I seek to understand how everyday life shapes health and disease, with a particular focus on mental health and psychiatric phenotypes.
+
+My research focuses on leveraging multimodal biomedical data—including omics (genomics, proteomics), patient-generated health data (wearable device data, surveys), and electronic health records—to investigate health determinants, trajectories, and individual heterogeneity. I apply statistical and machine learning methods tailored to specific research questions, with prior work examining gene–environment interactions and estimating heterogeneous treatment effects using causal machine learning (generalized random forests). I hope to contribute to improving personalized risk prediction, prevention, and intervention.
 
 I received a B.E. in Integrative Biotechnology from Sungkyunkwan University.
