@@ -1,6 +1,6 @@
 ---
 layout: page
-title: BIKO PGHD Empirical Study
+title: BIKO PGHD Feasibility Study
 importance: 2
 category: research
 ---
@@ -13,7 +13,7 @@ category: research
 **A Study on Establishing the Foundation for Linking and Collecting Patient-Generated Health Data (PGHD) in Republic of Korea National Bio Bigdata**
 <br>Korea Health Information Service (KHIS) · Nov 2025 – Oct 2026
 
-We conducted an 11-month pilot study of **187 participants** recruited through Samsung Medical Center, collecting and analyzing data from consumer wearables (**Samsung Galaxy Watch**) and **continuous glucose monitors (CGM)** to evaluate the feasibility of integrating these data into **[BioBigData.Korea (BIKO)](https://www.biobigdata.kr/){:target="_blank"}**.
+We conducted an 11-month feasibility study of **187 participants** recruited through Samsung Medical Center, collecting and analyzing data from consumer wearables (**Samsung Galaxy Watch**) and **continuous glucose monitors (CGM)** to evaluate the feasibility of integrating these data into **[BioBigData.Korea (BIKO)](https://www.biobigdata.kr/){:target="_blank"}**.
 
 My role:
 
