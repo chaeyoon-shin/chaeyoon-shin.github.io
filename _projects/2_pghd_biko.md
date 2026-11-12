@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PGHD for BIKO
+title: BIKO PGHD Empirical Study
 importance: 2
 category: research
 ---
