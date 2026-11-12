@@ -6,4 +6,4 @@ importance: 1
 category: research
 ---
 
-Drawing on continuous recordings from consumer wearables (Samsung Galaxy Watch and the *All of Us* Fitbit cohort), we are building a **lifelog age gap** that captures how far a person's daily physiology has drifted from their chronological age, and testing what the index reflects by comparing the omics, lifestyle, and clinical profiles of fast and slow agers.
+We are building and validating a **lifelog age** that captures how far a person's daily physiology has drifted from their chronological age using data from consumer wearables (Samsung Galaxy Watch and the *All of Us* Fitbit cohort), and testing what the index reflects by comparing the omics, lifestyle, and clinical profiles of fast and slow agers.
