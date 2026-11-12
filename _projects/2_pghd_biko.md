@@ -1,7 +1,6 @@
 ---
 layout: page
 title: PGHD for BIKO
-img: assets/img/pghd_biko_report.jpg
 importance: 2
 category: research
 ---
