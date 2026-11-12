@@ -6,15 +6,13 @@ importance: 2
 category: research
 ---
 
+<figure style="float: right; width: 160px; margin: 0 0 1rem 1.5rem; text-align: center;">
+  <img src="{{ 'assets/img/pghd_biko_report.jpg' | relative_url }}" alt="Final research report cover" style="width: 100%; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,.2);">
+  <figcaption style="font-size: 0.8rem; margin-top: 0.4rem;">Final research report</figcaption>
+</figure>
+
 **A Study on Establishing the Foundation for Linking and Collecting Patient-Generated Health Data (PGHD) in Republic of Korea National Bio Bigdata**
 <br>Korea Health Information Service (KHIS) · Nov 2025 – Oct 2026
-
-<div class="row justify-content-sm-center">
-  <div class="col-sm-5 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/pghd_biko_report.jpg" title="Final research report" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-<div class="caption">Final research report, Korea Health Information Service (2026).</div>
 
 We conducted an 11-month pilot study of **187 participants** recruited through Samsung Medical Center, collecting and analyzing data from consumer wearables (**Samsung Galaxy Watch**) and **continuous glucose monitors (CGM)** to evaluate the feasibility of integrating these data into **[BioBigData.Korea (BIKO)](https://www.biobigdata.kr/){:target="_blank"}**.
 
