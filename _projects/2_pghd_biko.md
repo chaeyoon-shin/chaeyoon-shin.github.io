@@ -13,5 +13,6 @@ Over 11 months, we ran a pilot study with **187 participants** recruited through
 
 My role:
 
-- Developed quality-control criteria for wearable and CGM data, assessed participant adherence and data completeness, and proposed core variables along with the minimum collection period and sample size for future large-scale collection
+- Established and applied quality-control criteria for wearable and CGM data based on the 4C1V framework (conformance, completeness, consistency, correlation, validity)
+- Assessed participant adherence and data completeness, and proposed key wearable variables along with the minimum collection period and sample size for future large-scale collection
 - Conducted an extensive literature review of PGHD collection in biobanks and population cohorts
