@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Lifelog AgeGap
-description: A wearable-derived index of biological aging.
 importance: 1
 category: research
 ---
