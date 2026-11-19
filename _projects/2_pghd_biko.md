@@ -1,6 +1,6 @@
 ---
 layout: page
-title: BIKO PGHD Feasibility Study
+title: BIKO PGHD Project
 importance: 2
 category: research
 ---
