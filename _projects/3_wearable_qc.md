@@ -7,11 +7,11 @@ category: research
 
 I built and maintain our lab's wearable data pipeline (Samsung Galaxy Watch, continuous glucose monitors), from raw exports to analysis-ready tables.
 
-- **Database.** Monthly raw Samsung Health exports are loaded into MongoDB by a weekly scheduled job, keeping every record as exported. Re-exports overwrite existing records, so the database always holds one copy of the full history.
-- **Master CSV.** When new data arrive, a QC pipeline rebuilds three tables (daily features, per-participant CGM summary, per-participant circadian rhythm) into a dated folder, with a log of the inputs and rule changes.
+- **Database.** Monthly raw Samsung Health exports are loaded into MongoDB by a weekly scheduled job, keeping every record as exported.
+- **Master CSV.** When new data arrive, a QC pipeline rebuilds three tables (daily features, per-participant CGM summary, per-participant circadian rhythm) into a dated folder.
 - **Documentation.** I wrote a lab guide covering the pipeline schedule and paths, how to query and export the database for first-time users, and the preprocessing rule and rationale for every variable, with a checklist for analysts.
 
-Main quality-control decisions:
+Some examples of quality-control decisions:
 
 - **Travel and time zones.** Travel is detected from the time-zone label on each record. Exports contain copies of pre-departure records under the destination's label (same clock time, same value), and a few records carry a spurious UTC label; neither counts as travel. Departure and return days, which mix two time zones, are dropped. Days abroad and 1 day before / 2 days after a trip are kept with flags so analysts can decide, following evidence on travel-related sleep and circadian disruption ([Willoughby 2025](https://doi.org/10.1093/sleep/zsaf077){:target="_blank"}; [Li 2017](https://doi.org/10.1371/journal.pbio.2001402){:target="_blank"}; [Mattingly 2021](https://doi.org/10.1038/s41746-021-00435-2){:target="_blank"}).
 
