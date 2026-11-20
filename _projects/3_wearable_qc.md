@@ -5,7 +5,7 @@ importance: 3
 category: research
 ---
 
-I built and maintain our lab's wearable data pipeline (Samsung Galaxy Watch, phone, and continuous glucose monitors), from raw exports to analysis-ready tables.
+I built and maintain our lab's wearable data pipeline (Samsung Galaxy Watch, continuous glucose monitors), from raw exports to analysis-ready tables.
 
 - **Database.** Monthly raw Samsung Health exports are loaded into MongoDB by a weekly scheduled job, keeping every record as exported. Re-exports overwrite existing records, so the database always holds one copy of the full history.
 - **Master CSV.** When new data arrive, a QC pipeline rebuilds three tables (daily features, per-participant CGM summary, per-participant circadian rhythm) into a dated folder, with a log of the inputs and rule changes.
