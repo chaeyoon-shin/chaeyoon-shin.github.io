@@ -9,7 +9,7 @@ I built and maintain our lab's wearable data pipeline (Samsung Galaxy Watch, con
 
 - **Database.** Monthly raw Samsung Health exports are loaded into MongoDB by a weekly scheduled job, keeping every record as exported.
 - **Master CSV.** When new data arrive, a QC pipeline rebuilds three tables (daily features, per-participant CGM summary, per-participant circadian rhythm) into a dated folder.
-- **Documentation.** I wrote a lab guide covering the pipeline schedule and paths, how to query and export the database for first-time users, and the preprocessing rule and rationale for every variable, with a checklist for analysts.
+- **Documentation.** I wrote a lab guide covering the pipeline schedule and paths, how to query and export data from the database for first-time users, and the preprocessing rule and rationale for every variable, with a checklist for analysts.
 
 Some examples of quality-control decisions:
 
